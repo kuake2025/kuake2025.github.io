@@ -1,24 +1,491 @@
 <!DOCTYPE html>
 <html lang="zh">
-<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({ id: "3LzpinepF6LSJwYh", ck: "3LzpinepF6LSJwYh" })</script>
-
+  <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({ id: "3LzpinepF6LSJwYh", ck: "3LzpinepF6LSJwYh" })</script>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="test" />
-  <meta name="keywords" content="test" />
-  <meta property="og:title" content="test" />
-  <meta property="og:description" content="test" />
-  <meta property="og:url" content="test" />
-  <meta property="og:type" content="website" />
-  <title id="page-title">test</title>
-<style></style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="夸克网盘资源搜索引擎 - 夸克98，提供快速、精准的网盘资源搜索服务，轻松找到您需要的资源。">
+  <meta name="keywords" content="夸克网盘, 资源搜索, 网盘资源, 夸克98, 网盘搜索引擎, 资源下载">
+  <meta name="author" content="夸克98">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4caf50">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="夸克网盘资源搜索引擎 - 夸克98">
+  <meta name="twitter:description" content="夸克网盘资源搜索引擎 - 夸克98，提供快速、精准的网盘资源搜索服务，轻松找到您需要的资源。">
+  <meta name="twitter:image" content="https://www.kuake98.com/logo.png">
+  <meta property="og:title" content="夸克网盘资源搜索引擎 - 夸克98">
+  <meta property="og:description" content="夸克网盘资源搜索引擎 - 夸克98，提供快速、精准的网盘资源搜索服务，轻松找到您需要的资源。">
+  <meta property="og:url" content="https://www.kuake98.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.kuake98.com/logo.png">
+  <title>夸克网盘资源搜索引擎 - 夸克98</title>
+  <style>
+    /* 自定义样式 */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .search-container {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .search-box {
+      width: 50%;
+      max-width: 500px;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .search-button:hover {
+      background-color: #45a049;
+    }
+
+    .category-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      gap: 10px;
+    }
+
+    .category-item {
+      padding: 10px 20px;
+      font-size: 14px;
+      border: 1px solid #4caf50;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .category-item:hover {
+      background-color: #45a049;
+    }
+
+    .resource-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .resource-card {
+      width: 220px;
+      height: 140px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      overflow: hidden;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .resource-card h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .resource-card p {
+      font-size: 14px;
+      color: #666;
+      margin: 10px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; /* 限制为1行 */
+    }
+
+    .resource-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 14px;
+      color: white;
+      background-color: #4caf50;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .resource-card a:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+  </style>
 </head>
 
 <body>
-  test
+  <header>
+    <h1>夸克网盘资源搜索引擎 - 夸克98</h1>
+  </header>
+
+  <section class="search-container">
+    <input type="text" id="searchInput" class="search-box" placeholder="搜索夸克网盘资源..." />
+    <button id="searchButton" class="search-button">搜索</button>
+  </section>
+
+  <section class="category-container" id="categoryContainer">
+  </section>
+
+  <section class="resource-container" id="resourceContainer">
+    <!-- 直接生成前 30 条数据的 HTML 元素 -->
+    <div class="resource-card">
+      <h3>下载神器IDM（含破解版、中文绿色特别版）</h3>
+      <p>体验下载神器IDM，提供破解版、中文绿色免安装特别版，支持无限制下载，操作简单，快速高效，适合各类用户使用。</p>
+      <a href="https://pan.quark.cn/s/d318fae46a6c" target="_blank">下载</a>
+    </div>
+    <div class="resource-card">
+      <h3>MagnetW 3.1.1</h3>
+      <p>磁力聚合搜索工具中文版 MagnetW 3.1.1 - 高效精准的磁力链接搜索与管理</p>
+      <a href="https://pan.quark.cn/s/de7b3efa435e" target="_blank">下载</a>
+    </div>
+    <div class="resource-card">
+      <h3>迅雷最新破解vip版</h3>
+      <p>迅雷vip破解版永久会员2025版下载-迅雷vip破解永久会员版下载</p>
+      <a href="https://pan.quark.cn/s/bc587d94dd4b" target="_blank">下载</a>
+    </div>
+    <div class="resource-card">
+      <h3>超强磁力下载Plus 1.3.4会员版、去广告版</h3>
+      <p>体验超强磁力下载Plus 1.3.4会员版和去广告版，享受无广告、高速下载和更多会员专属功能。</p>
+      <a href="https://pan.quark.cn/s/a045238a2d09" target="_blank">下载</a>
+    </div>
+    <div class="resource-card">
+      <h3>悟空下载会员解锁版 支持磁力链、迅雷链接、Ed2k 电驴</h3>
+      <p>体验悟空下载会员解锁版，支持磁力链、迅雷链接、Ed2k 电驴，享受无广告、高速下载和更多会员专属功能。</p>
+      <a href="https://pan.quark.cn/s/e69555bb9055" target="_blank">下载</a>
+    </div>
+    <div class="resource-card">
+      <h3>安卓必备，找磁力v1.0.7，磁力种子搜索软件免费(会员解锁版)</h3>
+      <p>体验【安卓手机软件】找磁力v1.0.7，磁力种子搜索软件免费(会员解锁版)，支持磁力链、迅雷链接、Ed2k 电驴。</p>
+      <a href="https://pan.quark.cn/s/256d17484f0e" target="_blank">下载</a>
+    </div>
+    <div class="resource-card">
+      <h3>磁力云App破解版、解锁版</h3>
+      <p>体验安卓必备的磁力云App破解版和解锁版，享受无广告、高速下载和更多会员专属功能，支持磁力链、迅雷链接、Ed2k电驴下载。</p>
+      <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">下载</a>
+    </div>
+    <div class="resource-card">
+      <h3>P2P下载器磁力下载_会员解锁版</h3>
+      <p>体验P2P下载器磁力下载_会员解锁版，享受会员解锁版、破解版和支持磁力链、迅雷链接、Ed2k电驴下载体验。</p>
+      <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">下载</a>
+    </div>
+    <div class="resource-card">
+      <h3>网盘搜索器（会员解锁版、破解版）</h3>
+      <p>体验网盘搜索器会员解锁版和破解版，享受更多免费功能与优化，解锁专属资源。</p>
+      <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">下载</a>
+    </div>
+    <!-- 继续添加剩余的前 30 条数据 -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 夸克98 | <a href="https://www.kuake98.com" target="_blank" style="color: white; text-decoration: none;">www.kuake98.com</a></p>
+    <p>
+      本站资源收集于网络，仅供学习和交流使用，本站一切资源不代表本站立场，如有不妥请联系本站处理！
+    </p>
+  </footer>
+
+
+
+  <script>
+    const DB_NAME = 'resourceDB';
+    const STORE_NAME = 'resources';
+    let db;
+    let currentPage = 0;
+    const itemsPerPage = 50;
+
+    // 初始化 IndexedDB
+    const openDB = () => {
+      const request = indexedDB.open(DB_NAME, 1);
+      request.onupgradeneeded = function (event) {
+        const db = event.target.result;
+
+        // 创建资源存储
+        if (!db.objectStoreNames.contains(STORE_NAME)) {
+          db.createObjectStore(STORE_NAME, { keyPath: 'downloadURL' }); // 修改 keyPath 为 "downloadURL"
+        }
+      };
+      request.onsuccess = function (event) {
+        db = event.target.result;
+        checkVersionUpdates();
+      };
+      request.onerror = function (event) {
+        console.error('打开数据库失败', event);
+      };
+    };
+
+    // 检查版本更新
+    const checkVersionUpdates = () => {
+      fetch('./resourcesVersion.json')
+        .then(response => response.json())
+        .then(remoteVersions => {
+          const localVersions = JSON.parse(localStorage.getItem('resourceVersions')) || [];
+          const updates = remoteVersions.filter(remoteVersion => {
+            const localVersion = localVersions.find(v => v.name === remoteVersion.name);
+            return !localVersion || localVersion.version !== remoteVersion.version;
+          });
+
+          if (updates.length > 0) {
+            updateResources(updates, remoteVersions);
+          } else {
+            lazyLoadResources();
+          }
+        })
+        .catch(err => console.error('版本检查失败', err));
+    };
+
+    // 更新资源
+    const updateResources = (updates, remoteVersions) => {
+      const promises = updates.map(update => {
+        return fetch(`./${update.name}.json`)
+          .then(response => response.json())
+          .then(data => {
+            const tx = db.transaction(STORE_NAME, 'readwrite');
+            const resourceStore = tx.objectStore(STORE_NAME);
+
+            // 更新资源数据
+            data.forEach(item => resourceStore.put(item));
+          });
+      });
+
+      Promise.all(promises)
+        .then(() => {
+          console.log('资源更新完成');
+          // 更新 localStorage 中的版本信息
+          localStorage.setItem('resourceVersions', JSON.stringify(remoteVersions));
+          lazyLoadResources();
+        })
+        .catch(err => console.error('资源更新失败', err));
+    };
+
+    // 懒加载资源
+    const lazyLoadResources = () => {
+      const tx = db.transaction(STORE_NAME, 'readonly');
+      const store = tx.objectStore(STORE_NAME);
+      const request = store.getAll();
+      request.onsuccess = function (event) {
+        const resources = event.target.result;
+
+        // 如果数据库为空，尝试重新加载资源文件
+        if (resources.length === 0) {
+          console.warn('数据库中没有数据，尝试重新加载资源文件。');
+          reloadResources();
+          return;
+        }
+
+        const start = currentPage * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        // 检查是否还有更多内容
+        if (start >= resources.length) {
+          if (currentPage === 0) {
+            console.warn('首次加载没有内容，请检查资源文件是否正确加载。');
+          } else {
+            console.log('没有更多内容可加载');
+          }
+          return;
+        }
+
+        const paginatedResources = resources.slice(start, end);
+        appendResources(paginatedResources); // 使用 appendResources 而不是清空内容
+        currentPage++;
+      };
+      request.onerror = function (event) {
+        console.error('加载资源失败', event);
+      };
+    };
+
+    // 重新加载资源文件
+    const reloadResources = () => {
+      fetch('./resourcesVersion.json')
+        .then(response => response.json())
+        .then(remoteVersions => {
+          const promises = remoteVersions.map(version => {
+            return fetch(`./${version.name}.json`)
+              .then(response => response.json())
+              .then(data => {
+                const tx = db.transaction(STORE_NAME, 'readwrite');
+                const resourceStore = tx.objectStore(STORE_NAME);
+                data.forEach(item => resourceStore.put(item));
+              });
+          });
+
+          Promise.all(promises)
+            .then(() => {
+              console.log('资源重新加载完成');
+              currentPage = 0; // 重置分页
+              lazyLoadResources(); // 确保重新加载后展示内容
+            })
+            .catch(err => console.error('资源重新加载失败', err));
+        })
+        .catch(err => console.error('资源版本文件加载失败', err));
+    };
+
+    // 追加资源到页面
+    const appendResources = (resources) => {
+      const container = document.getElementById('resourceContainer');
+      resources.forEach(resource => {
+        const card = document.createElement('div');
+        card.className = 'resource-card';
+        card.innerHTML = `
+          <h3>${resource.name}</h3>
+          <p>${resource.description}</p>
+          <a href="${resource.downloadURL}" target="_blank">下载</a>
+        `;
+        container.appendChild(card);
+      });
+    };
+
+    // 显示资源
+    const displayResources = (resources) => {
+      const container = document.getElementById('resourceContainer');
+      container.innerHTML = ''; // 清空现有资源
+      resources.forEach(resource => {
+        const card = document.createElement('div');
+        card.className = 'resource-card';
+        card.innerHTML = `
+          <h3>${resource.name}</h3>
+          <p>${resource.description}</p>
+          <a href="${resource.downloadURL}" target="_blank">下载</a>
+        `;
+        container.appendChild(card);
+      });
+    };
+
+    // 搜索资源
+    document.getElementById('searchButton').addEventListener('click', () => {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const tx = db.transaction(STORE_NAME, 'readonly');
+      const store = tx.objectStore(STORE_NAME);
+      const request = store.getAll();
+      request.onsuccess = function (event) {
+        const resources = event.target.result;
+        const filteredResources = resources.filter(resource =>
+          (resource.name && resource.name.toLowerCase().includes(query)) || 
+          (resource.description && resource.description.toLowerCase().includes(query))
+        );
+        document.getElementById('resourceContainer').innerHTML = ''; // 清空现有资源
+        displayResources(filteredResources);
+      };
+    });
+
+    // 分类筛选功能
+    document.getElementById('categoryContainer').addEventListener('click', (event) => {
+      if (event.target.classList.contains('category-item')) {
+        const category = event.target.getAttribute('data-category');
+        const tx = db.transaction(STORE_NAME, 'readonly');
+        const store = tx.objectStore(STORE_NAME);
+        const request = store.getAll();
+        request.onsuccess = function (event) {
+          const resources = event.target.result;
+          const filteredResources = category
+            ? resources.filter(resource => resource.classify === category)
+            : resources;
+          document.getElementById('resourceContainer').innerHTML = ''; // 清空现有资源
+          displayResources(filteredResources);
+        };
+      }
+    });
+
+    // 监听滚动事件实现懒加载
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        // 距离底部50px时加载更多内容
+        lazyLoadResources();
+      }
+    });
+
+    // 动态生成分类模块
+    const generateCategories = () => {
+      fetch('./classify.json')
+        .then(response => response.json())
+        .then(data => {
+          const container = document.getElementById('categoryContainer');
+          container.innerHTML = ''; // 清空现有分类
+          const allCategory = document.createElement('div');
+          allCategory.className = 'category-item';
+          allCategory.setAttribute('data-category', '');
+          allCategory.textContent = '全部分类';
+          container.appendChild(allCategory);
+
+          data.forEach(category => {
+            const categoryItem = document.createElement('div');
+            categoryItem.className = 'category-item';
+            categoryItem.setAttribute('data-category', category.name);
+            categoryItem.textContent = category.name;
+            container.appendChild(categoryItem);
+          });
+        })
+        .catch(err => console.error('加载分类失败', err));
+    };
+
+    // 初始化
+    openDB();
+    generateCategories(); // 调用动态生成分类函数
+  </script>
 </body>
 
 </html>

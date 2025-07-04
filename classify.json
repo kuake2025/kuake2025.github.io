@@ -1,0 +1,26 @@
+[
+  {
+    "name": "磁力",
+    "type": "classify"
+  },
+  {
+    "name": "软件",
+    "type": "classify"
+  },
+  {
+    "name": "switch游戏",
+    "type": "classify"
+  },
+  {
+    "name": "爽剧",
+    "type": "classify"
+  },
+  {
+    "name": "电影",
+    "type": "classify"
+  },
+  {
+    "name": "书籍教程",
+    "type": "classify"
+  }
+]
