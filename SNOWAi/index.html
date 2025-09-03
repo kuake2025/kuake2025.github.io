@@ -375,7 +375,7 @@
         .then((data) => {
           createResource(data);
           //加载线上资源
-          fetch("http://www.api.kuake98.com/resourceList")
+          fetch("https://www.api.kuake98.com/resourceList")
             .then((response) => response.json())
             .then((onlineData) => {
               console.log(onlineData, "onlineData");
