@@ -96,4 +96,10 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority> 
     </url>
+    <url>
+        <loc>https://kuake2025.github.io/FilmoraGo/index.html</loc>
+        <lastmod>2025-09-05</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
 </urlset>
