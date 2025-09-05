@@ -22,5 +22,21 @@
   {
     "name": "书籍教程",
     "type": "classify"
+  },
+  {
+    "name": "少儿影视",
+    "type": "classify"
+  },
+  {
+    "name": "2025热门影视更新中",
+    "type": "classify"
+  },
+  {
+    "name": "游戏",
+    "type": "classify"
+  },
+  {
+    "name": "AI",
+    "type": "classify"
   }
 ]

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-  <script>LA.init({ id: "3LzpinepF6LSJwYh", ck: "3LzpinepF6LSJwYh" })</script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({ id: "3LzUSkt4Weqgny6B", ck: "3LzUSkt4Weqgny6B" })</script>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +17,12 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="夸克网盘资源搜索引擎 - 夸克98">
   <meta name="twitter:description" content="夸克网盘资源搜索引擎 - 夸克98，提供快速、精准的网盘资源搜索服务，轻松找到您需要的资源。">
-  <meta name="twitter:image" content="https://kuake2025.github.io/logo.png">
+  <meta name="twitter:image" content="https://www.kuake98.com/logo.png">
   <meta property="og:title" content="夸克网盘资源搜索引擎 - 夸克98">
   <meta property="og:description" content="夸克网盘资源搜索引擎 - 夸克98，提供快速、精准的网盘资源搜索服务，轻松找到您需要的资源。">
-  <meta property="og:url" content="https://kuake2025.github.io/">
+  <meta property="og:url" content="https://www.kuake98.com">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://kuake2025.github.io/logo.png">
+  <meta property="og:image" content="https://www.kuake98.com/logo.png">
   <title>夸克网盘资源搜索引擎 - 夸克98</title>
   <meta name="google-site-verification" content="QJztLn55ZjD75EJiM5-v-cIwN1AbdgEL0-apsp6df-4" />
   <style>
@@ -50,12 +51,63 @@
       font-weight: bold;
     }
 
-    .search-container {
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
       padding: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
+      width: 80vw;
     }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 75vh;
+      padding: 24px 8px 0 8px;
+    }
+
+    .search-container {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 24px;
+    }
+
+    .logo-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 28px;
+      animation: fadeInDown 1s;
+      justify-content: center;
+    }
+
+    .logo-title a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-title img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 4px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      margin-right: 12px;
+    }
+
+
 
     .search-box {
       width: 50%;
@@ -67,6 +119,78 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+      border-radius: 50px;
+      padding: 2px;
+      background: linear-gradient(-12deg, #dc5b24, #35b169);
+      box-shadow: 0 4px 20px rgba(111, 85, 255, 0.25);
+      animation: fadeIn 1.2s;
+    }
+
+    .search-container .search-box {
+      margin: 20px auto;
+    }
+
+    .search-box-inner {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 48px;
+      padding: 4px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 48px;
+      outline: none;
+      background: transparent;
+      color: #000000;
+    }
+
+    .search-btn {
+      padding: 10px 10px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s, transform 0.2s;
+      gap: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      white-space: nowrap;
+      margin: 0 10px;
+    }
+
+    .search-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .pan-btn {
+      color: #8b5cf6;
+    }
+
+    .separator {
+      color: #d1d5db;
+      margin: 0 4px;
+    }
+
+    .search-buttons {
+      display: flex;
+      align-items: center;
+    }
+
     .search-button {
       padding: 12px 20px;
       font-size: 16px;
@@ -76,6 +200,64 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.2s ease;
+    }
+
+    .results-main-container {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .source-filters {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background-color: #ffffff;
+      border: 1px solid #8977ff;
+      border-radius: 20px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: #8975ff;
+    }
+
+    .filter-btn.active {
+      background-color: #6f55ff45;
+      color: #6f55ff;
+      border-color: #6f55ff;
+    }
+
+    .filter-btn img {
+      width: 68px;
+      height: 20px;
+    }
+
+    .filter-btn:hover {
+      background-color: #e0e0e0;
+      border-color: #ccc;
     }
 
     .search-button:hover {
@@ -95,20 +277,6 @@
       gap: 10px;
     }
 
-    .category-item {
-      padding: 10px 20px;
-      font-size: 14px;
-      border: 1px solid #4caf50;
-      border-radius: 5px;
-      background-color: #4caf50;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .category-item:hover {
-      background-color: #45a049;
-    }
 
     .resource-container {
       display: flex;
@@ -120,8 +288,8 @@
     }
 
     .resource-card {
-      width: 220px;
-      height: 140px;
+      width: 100%;
+      height: 60px;
       padding: 15px;
       background-color: #fff;
       border-radius: 8px;
@@ -129,6 +297,9 @@
       text-align: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       overflow: hidden;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
     }
 
     .resource-card:hover {
@@ -137,35 +308,34 @@
     }
 
     .resource-card h3 {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: bold;
       margin: 10px 0;
       color: #333;
-    }
-
-    .resource-card p {
-      font-size: 14px;
-      color: #666;
-      margin: 10px 0;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap; /* 限制为1行 */
+      white-space: nowrap;
+      flex: 1;
+      /* 限制为1行 */
     }
+
 
     .resource-card a {
       display: inline-block;
       margin-top: 10px;
-      padding: 8px 12px;
-      font-size: 14px;
+      padding: 0.2rem 0.2rem;
+      font-size: 1rem;
       color: white;
-      background-color: #4caf50;
+      background-color: #6f55ff;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.2s ease;
+      /* flex: 1; */
+      width: 4rem;
     }
 
     .resource-card a:hover {
-      background-color: #45a049;
+      background-color: #5844cc;
     }
 
     footer {
@@ -180,70 +350,85 @@
 </head>
 
 <body>
-  <header>
-    <h1>夸克网盘资源搜索引擎 - 夸克98</h1>
-  </header>
+  <div class="container" style="padding-top: 70px;">
 
-  <section class="search-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="搜索夸克网盘资源..." />
-    <button id="searchButton" class="search-button">搜索</button>
-  </section>
+    <section class="search-container">
+      <div class="logo-title">
+        <a href="/" style="text-decoration: none; color: inherit;">
+          <img src="./logo.png" alt="logo">
+          <h1><span>夸克98</span></h1>
+        </a>
+      </div>
 
-  <section class="category-container" id="categoryContainer">
-  </section>
+      <div class="search-box">
+        <div class="search-box-inner">
+          <input type="text" id="searchInput" name="keyword" placeholder="输入搜索关键词…" aria-label="搜索关键词" value=""
+            style="width: 100%;">
+          <div class="search-buttons">
+            <!-- <button  type="submit" id="searchButton" class="search-btn doc-btn">搜文档</button> -->
+            <span class="separator">|</span>
+            <button type="submit" id="searchButton" class="search-btn pan-btn">搜网盘</button>
+          </div>
+        </div>
+      </div>
 
-  <section class="resource-container" id="resourceContainer">
-    <!-- 直接生成前 30 条数据的 HTML 元素 -->
-    <div class="resource-card">
-      <h3>下载神器IDM（含破解版、中文绿色特别版）</h3>
-      <p>体验下载神器IDM，提供破解版、中文绿色免安装特别版，支持无限制下载，操作简单，快速高效，适合各类用户使用。</p>
-      <a href="https://pan.quark.cn/s/d318fae46a6c" target="_blank">下载</a>
+    </section>
+
+    <div class="results-main-container">
+      <div class="source-filters">
+        <!-- <div class="filters-title-wrapper">
+          <div class="filters-title">来源</div>
+        </div> -->
+        <div class="filters" id="categoryContainer">
+        </div>
+      </div>
+
+      <section class="resource-container" id="resourceContainer">
+        <!-- 直接生成前 30 条数据的 HTML 元素 -->
+        <div class="resource-card">
+          <h3 title="下载神器IDM（含破解版、中文绿色特别版）">下载神器IDM（含破解版、中文绿色特别版）</h3>
+          <a href="https://pan.quark.cn/s/d318fae46a6c" target="_blank">前往</a>
+        </div>
+        <div class="resource-card">
+          <h3 title="MagnetW 3.1.1">MagnetW 3.1.1</h3>
+          <a href="https://pan.quark.cn/s/de7b3efa435e" target="_blank">前往</a>
+        </div>
+        <div class="resource-card">
+          <h3 title="迅雷最新破解vip版">迅雷最新破解vip版</h3>
+          <a href="https://pan.quark.cn/s/bc587d94dd4b" target="_blank">前往</a>
+        </div>
+        <div class="resource-card">
+          <h3 title="超强磁力下载Plus 1.3.4会员版、去广告版">超强磁力下载Plus 1.3.4会员版、去广告版</h3>
+          <a href="https://pan.quark.cn/s/a045238a2d09" target="_blank">前往</a>
+        </div>
+        <div class="resource-card">
+          <h3 title="悟空下载会员解锁版 支持磁力链、迅雷链接、Ed2k 电驴">悟空下载会员解锁版 支持磁力链、迅雷链接、Ed2k 电驴</h3>
+          <a href="https://pan.quark.cn/s/e69555bb9055" target="_blank">前往</a>
+        </div>
+        <div class="resource-card">
+          <h3 title="安卓必备，找磁力v1.0.7，磁力种子搜索软件免费(会员解锁版)">安卓必备，找磁力v1.0.7，磁力种子搜索软件免费(会员解锁版)</h3>
+          <a href="https://pan.quark.cn/s/256d17484f0e" target="_blank">前往</a>
+        </div>
+        <div class="resource-card">
+          <h3 title="磁力云App破解版、解锁版">磁力云App破解版、解锁版</h3>
+          <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">前往</a>
+        </div>
+        <div class="resource-card">
+          <h3 title="P2P下载器磁力下载_会员解锁版">P2P下载器磁力下载_会员解锁版</h3>
+          <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">前往</a>
+        </div>
+        <div class="resource-card">
+          <h3 title="网盘搜索器（会员解锁版、破解版）">网盘搜索器（会员解锁版、破解版）</h3>
+          <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">前往</a>
+        </div>
+        <!-- 继续添加剩余的前 30 条数据 -->
+      </section>
     </div>
-    <div class="resource-card">
-      <h3>MagnetW 3.1.1</h3>
-      <p>磁力聚合搜索工具中文版 MagnetW 3.1.1 - 高效精准的磁力链接搜索与管理</p>
-      <a href="https://pan.quark.cn/s/de7b3efa435e" target="_blank">下载</a>
-    </div>
-    <div class="resource-card">
-      <h3>迅雷最新破解vip版</h3>
-      <p>迅雷vip破解版永久会员2025版下载-迅雷vip破解永久会员版下载</p>
-      <a href="https://pan.quark.cn/s/bc587d94dd4b" target="_blank">下载</a>
-    </div>
-    <div class="resource-card">
-      <h3>超强磁力下载Plus 1.3.4会员版、去广告版</h3>
-      <p>体验超强磁力下载Plus 1.3.4会员版和去广告版，享受无广告、高速下载和更多会员专属功能。</p>
-      <a href="https://pan.quark.cn/s/a045238a2d09" target="_blank">下载</a>
-    </div>
-    <div class="resource-card">
-      <h3>悟空下载会员解锁版 支持磁力链、迅雷链接、Ed2k 电驴</h3>
-      <p>体验悟空下载会员解锁版，支持磁力链、迅雷链接、Ed2k 电驴，享受无广告、高速下载和更多会员专属功能。</p>
-      <a href="https://pan.quark.cn/s/e69555bb9055" target="_blank">下载</a>
-    </div>
-    <div class="resource-card">
-      <h3>安卓必备，找磁力v1.0.7，磁力种子搜索软件免费(会员解锁版)</h3>
-      <p>体验【安卓手机软件】找磁力v1.0.7，磁力种子搜索软件免费(会员解锁版)，支持磁力链、迅雷链接、Ed2k 电驴。</p>
-      <a href="https://pan.quark.cn/s/256d17484f0e" target="_blank">下载</a>
-    </div>
-    <div class="resource-card">
-      <h3>磁力云App破解版、解锁版</h3>
-      <p>体验安卓必备的磁力云App破解版和解锁版，享受无广告、高速下载和更多会员专属功能，支持磁力链、迅雷链接、Ed2k电驴下载。</p>
-      <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">下载</a>
-    </div>
-    <div class="resource-card">
-      <h3>P2P下载器磁力下载_会员解锁版</h3>
-      <p>体验P2P下载器磁力下载_会员解锁版，享受会员解锁版、破解版和支持磁力链、迅雷链接、Ed2k电驴下载体验。</p>
-      <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">下载</a>
-    </div>
-    <div class="resource-card">
-      <h3>网盘搜索器（会员解锁版、破解版）</h3>
-      <p>体验网盘搜索器会员解锁版和破解版，享受更多免费功能与优化，解锁专属资源。</p>
-      <a href="https://pan.quark.cn/s/bf28c82b7aa3" target="_blank">下载</a>
-    </div>
-    <!-- 继续添加剩余的前 30 条数据 -->
-  </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 夸克98 | <a href="https://kuake2025.github.io/" target="_blank" style="color: white; text-decoration: none;">www.kuake98.com</a></p>
+    <p>&copy; 2025 夸克98 | <a href="https://www.kuake98.com" target="_blank"
+        style="color: white; text-decoration: none;">www.kuake98.com</a></p>
     <p>
       本站资源收集于网络，仅供学习和交流使用，本站一切资源不代表本站立场，如有不妥请联系本站处理！
     </p>
@@ -308,7 +493,13 @@
             const resourceStore = tx.objectStore(STORE_NAME);
 
             // 更新资源数据
-            data.forEach(item => resourceStore.put(item));
+            data.forEach(item => {
+              if (item.downloadURL) {
+                resourceStore.put(item);
+              } else {
+                console.warn('资源缺少 downloadURL 属性，已跳过：', item);
+              }
+            });
           });
       });
 
@@ -393,8 +584,7 @@
         card.className = 'resource-card';
         card.innerHTML = `
           <h3>${resource.name}</h3>
-          <p>${resource.description}</p>
-          <a href="${resource.downloadURL}" target="_blank">下载</a>
+          <a href="${resource.downloadURL}" target="_blank">前往</a>
         `;
         container.appendChild(card);
       });
@@ -408,9 +598,8 @@
         const card = document.createElement('div');
         card.className = 'resource-card';
         card.innerHTML = `
-          <h3>${resource.name}</h3>
-          <p>${resource.description}</p>
-          <a href="${resource.downloadURL}" target="_blank">下载</a>
+          <h3 title=${resource.name} >${resource.name}</h3>
+          <a href="${resource.downloadURL}" target="_blank">前往</a>
         `;
         container.appendChild(card);
       });
@@ -425,7 +614,7 @@
       request.onsuccess = function (event) {
         const resources = event.target.result;
         const filteredResources = resources.filter(resource =>
-          (resource.name && resource.name.toLowerCase().includes(query)) || 
+          (resource.name && resource.name.toLowerCase().includes(query)) ||
           (resource.description && resource.description.toLowerCase().includes(query))
         );
         document.getElementById('resourceContainer').innerHTML = ''; // 清空现有资源
@@ -435,7 +624,12 @@
 
     // 分类筛选功能
     document.getElementById('categoryContainer').addEventListener('click', (event) => {
-      if (event.target.classList.contains('category-item')) {
+      if (event.target.classList.contains('filter-btn')) {
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        // event.target.classList.toggle('active');
         const category = event.target.getAttribute('data-category');
         const tx = db.transaction(STORE_NAME, 'readonly');
         const store = tx.objectStore(STORE_NAME);
@@ -466,15 +660,15 @@
         .then(data => {
           const container = document.getElementById('categoryContainer');
           container.innerHTML = ''; // 清空现有分类
-          const allCategory = document.createElement('div');
-          allCategory.className = 'category-item';
+          const allCategory = document.createElement('a');
+          allCategory.className = 'filter-btn';
           allCategory.setAttribute('data-category', '');
           allCategory.textContent = '全部分类';
           container.appendChild(allCategory);
 
           data.forEach(category => {
-            const categoryItem = document.createElement('div');
-            categoryItem.className = 'category-item';
+            const categoryItem = document.createElement('a');
+            categoryItem.className = 'filter-btn';
             categoryItem.setAttribute('data-category', category.name);
             categoryItem.textContent = category.name;
             container.appendChild(categoryItem);
