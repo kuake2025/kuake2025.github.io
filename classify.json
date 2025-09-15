@@ -8,6 +8,10 @@
     "type": "classify"
   },
   {
+    "name": "TV软件",
+    "type": "classify"
+  },
+  {
     "name": "switch游戏",
     "type": "classify"
   },
