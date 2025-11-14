@@ -391,4 +391,59 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority> 
     </url>
+
+    <url>
+        <loc>https://kuake2025.github.io/ku9tv.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
+    <url>
+        <loc>https://kuake2025.github.io/dangbeiTV.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
+    <url>
+        <loc>https://kuake2025.github.io/MagnetW2023.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
+    <url>
+        <loc>https://kuake2025.github.io/XBrowser2025.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
+    <url>
+        <loc>https://kuake2025.github.io/hanjuTV2025.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
+    <url>
+        <loc>https://kuake2025.github.io/xiaobaiyunpanTV.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
+    <url>
+        <loc>https://kuake2025.github.io/taiquanTV.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
+    <url>
+        <loc>https://kuake2025.github.io/youziTV.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
+    <url>
+        <loc>https://kuake2025.github.io/777TV.html</loc>
+        <lastmod>2025-11-13</lastmod> 
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority> 
+    </url>
 </urlset>
