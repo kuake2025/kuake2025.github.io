@@ -8,6 +8,10 @@
     "type": "classify"
   },
   {
+    "name": "mac软件",
+    "type": "classify"
+  },
+  {
     "name": "TV软件",
     "type": "classify"
   },
@@ -24,7 +28,15 @@
     "type": "classify"
   },
   {
+    "name": "大中小学资料",
+    "type": "classify"
+  },
+  {
     "name": "书籍教程",
+    "type": "classify"
+  },
+  {
+    "name": "电子书",
     "type": "classify"
   },
   {
@@ -36,11 +48,35 @@
     "type": "classify"
   },
   {
+    "name": "经典港剧大合集450部国粤双语中字",
+    "type": "classify"
+  },
+  {
     "name": "游戏",
     "type": "classify"
   },
   {
     "name": "AI",
+    "type": "classify"
+  },
+  {
+    "name": "音乐",
+    "type": "classify"
+  },
+  {
+    "name": "付费资源",
+    "type": "classify"
+  },
+  {
+    "name": "动漫",
+    "type": "classify"
+  },
+  {
+    "name": "韩日泰剧",
+    "type": "classify"
+  },
+  {
+    "name": "欧美剧",
     "type": "classify"
   }
 ]
