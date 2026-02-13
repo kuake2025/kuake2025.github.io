@@ -492,3 +492,8 @@ footer ul li a {
     display: block;
   }
 }
+
+.img-box{
+  background: #fff;
+  min-height: 300px;
+}
