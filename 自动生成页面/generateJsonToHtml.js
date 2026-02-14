@@ -100,6 +100,31 @@ resources.forEach((item) => {
     <meta name="twitter:image" content="${imgUrl}">
     <title>${pageTitle}</title>
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "${pageTitle}",
+        "description": "${metaDescription}",
+        "url": "${ogUrl}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Aurora2025",
+          "url": "https://kuake2025.github.io/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://kuake2025.github.io/logo.png",
+            "width": 200,
+            "height": 200
+          }
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://kuake2025.github.io/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- 新增：左右广告容器 -->
