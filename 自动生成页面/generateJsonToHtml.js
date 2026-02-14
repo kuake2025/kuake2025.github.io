@@ -39,7 +39,7 @@ resources.forEach((item) => {
   const pageTitle = item.seo_title || item.title;
   const metaDescription = item.description || "";
   const metaKeywords = item.keywords || "";
-  const ogUrl = `${mainUrl}${prefix}${item.id}.html`; // 暂时保持固定，或者根据 id 生成: `.../${item.id}.html`
+  const ogUrl = `${mainUrl}${prefix}${item.url_slug}.html`; // 暂时保持固定，或者根据 id 生成: `.../${item.id}.html`
 
   // Hero区域
   const heroTitle = item.title;
@@ -251,7 +251,7 @@ resources.forEach((item) => {
   // 4. 写入文件
   // 使用 item.title 作为文件名，并去除特殊字符，防止文件名非法
   // 也可以改用 item.id (如 `${item.id}.html`)
-  const safeFilename = `${item.id}.html`;
+  const safeFilename = `${item.url_slug}.html`;
   const outputPath = path.join(outputDir, safeFilename);
 
   fs.writeFileSync(outputPath, htmlContent, "utf8");
