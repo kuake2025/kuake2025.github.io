@@ -83,7 +83,7 @@ resources.forEach((item) => {
 <!DOCTYPE html>
 <html lang="zh">
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({ id: "3LzpinepF6LSJwYh", ck: "3LzpinepF6LSJwYh" })</script>
+<script>LA.init({id:"3NLSSaUXfrgwDz6w",ck:"3NLSSaUXfrgwDz6w"})</script>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
