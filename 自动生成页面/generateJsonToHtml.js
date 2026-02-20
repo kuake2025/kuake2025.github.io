@@ -26,6 +26,7 @@ const formattedDate = `${year}-${month}-${day}`;
 let sitemap = "";
 const mainUrl = "https://kuake2025.github.io/";
 const prefix = "software/";
+let urlAll = []
 
 // 3. 循环处理每个资源项
 resources.forEach((item) => {
@@ -239,11 +240,11 @@ resources.forEach((item) => {
           </ul>
           <div id="download-btns">
             ${downloadLinks
-              .map(
-                (link) =>
-                  `<a href="${link.url}" id="download-btn" class="download-btn" target="_blank">${link.label}</a>`
-              )
-              .join("")}
+      .map(
+        (link) =>
+          `<a href="${link.url}" id="download-btn" class="download-btn" target="_blank">${link.label}</a>`
+      )
+      .join("")}
           </div>
         </div>
       </section>
@@ -273,6 +274,8 @@ resources.forEach((item) => {
         <priority>1.0</priority> 
   </url>`;
 
+  urlAll.push(ogUrl)
+
   // 4. 写入文件
   // 使用 item.title 作为文件名，并去除特殊字符，防止文件名非法
   // 也可以改用 item.id (如 `${item.id}.html`)
@@ -290,6 +293,9 @@ ${sitemap}
 const outputSitemapDir = path.join(__dirname, "../", "software");
 const outputSitemapPath = path.join(outputSitemapDir, "sitemap.xml");
 fs.writeFileSync(outputSitemapPath, allSitemap, "utf8");
+
+const outputUrlPath = path.join(__dirname, "url.txt");
+fs.writeFileSync(outputUrlPath, JSON.stringify(urlAll), "utf8");
 
 const robots = `User-agent: *
 Disallow:
