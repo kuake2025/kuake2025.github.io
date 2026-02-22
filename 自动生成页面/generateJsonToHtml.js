@@ -28,6 +28,9 @@ const mainUrl = "https://kuake2025.github.io/";
 const prefix = "software/";
 let urlAll = []
 
+//目录的内容
+let directoryContent = ''
+
 // 3. 循环处理每个资源项
 resources.forEach((item) => {
   // 跳过数据不够的
@@ -274,6 +277,11 @@ resources.forEach((item) => {
         <priority>1.0</priority> 
   </url>`;
 
+  // 生成目录内容
+  directoryContent += `
+  <li><a href="/software/${item.url_slug}.html" title="${pageTitle}">${item.url_slug}</a></li>
+  `
+
   urlAll.push(ogUrl)
 
   // 4. 写入文件
@@ -303,5 +311,82 @@ Sitemap: ${mainUrl}sitemap.xml
 `;
 const outputRobotsPath = path.join(outputSitemapDir, "robots.txt");
 fs.writeFileSync(outputRobotsPath, robots, "utf8");
+
+
+// 目录的html
+let directoryHtml = `<!DOCTYPE html>
+<html lang="zh">
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3NLSSaUXfrgwDz6w",ck:"3NLSSaUXfrgwDz6w"})</script>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="夸克网盘资源为您提供海量优质软件资源，涵盖安卓模拟器、视频播放器、办公工具、系统优化等类别。所有资源均支持高速下载，界面清爽无广告，助您轻松获取所需工具。">
+  <meta name="keywords" content="软件下载, 安卓模拟器, 视频播放器, 办公软件, 系统优化, 高速下载, 无广告, 资源聚合, 免费工具">
+  <meta name="author" content="夸克98">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4caf50">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="夸克网盘资源 - 软件资源大全 | 免费下载高速稳定">
+  <meta name="twitter:description" content="夸克网盘资源为您提供海量优质软件资源，涵盖安卓模拟器、视频播放器、办公工具、系统优化等类别。所有资源均支持高速下载，界面清爽无广告，助您轻松获取所需工具。">
+  <meta name="twitter:image" content="https://kuake2025.github.io/logo.png">
+  <meta property="og:title" content="夸克网盘资源 - 软件资源大全 | 免费下载高速稳定">
+  <meta property="og:description" content="夸克网盘资源为您提供海量优质软件资源，涵盖安卓模拟器、视频播放器、办公工具、系统优化等类别。所有资源均支持高速下载，界面清爽无广告，助您轻松获取所需工具。">
+  <meta property="og:url" content="https://kuake2025.github.io/software">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://kuake2025.github.io/logo.png">
+  <title>夸克网盘资源 - 软件资源大全 | 免费下载高速稳定</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "夸克网盘资源 - 软件资源大全 | 免费下载高速稳定",
+        "description": "夸克网盘资源为您提供海量优质软件资源，涵盖安卓模拟器、视频播放器、办公工具、系统优化等类别。所有资源均支持高速下载，界面清爽无广告，助您轻松获取所需工具。",
+        "url": "https://kuake2025.github.io/software",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Aurora2025",
+          "url": "https://kuake2025.github.io/software",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://kuake2025.github.io/logo.png",
+            "width": 200,
+            "height": 200
+          }
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://kuake2025.github.io/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body> 
+    <nav aria-label="breadcrumb">
+        <ol>
+            <li><a href="/">首页</a></li>
+            <li>资源目录</li>
+        </ol>
+    </nav>
+    <main>
+        <h1>资源目录</h1>
+        <section>
+            <h2>软件</h2>
+            <ul>
+            ${directoryContent}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 跨界资源网. All rights reserved.</p>
+    </footer>
+  </body>
+  </html>
+  `
+  const outputDirectoryPath = path.join(outputSitemapDir, "index.html");
+fs.writeFileSync(outputDirectoryPath, directoryHtml, "utf8");
 
 console.log(`\n全部处理完成！文件保存在 software 文件夹中。`);
