@@ -305,6 +305,9 @@ fs.writeFileSync(outputSitemapPath, allSitemap, "utf8");
 const outputUrlPath = path.join(__dirname, "url.txt");
 fs.writeFileSync(outputUrlPath, JSON.stringify(urlAll), "utf8");
 
+const outputSubmitUrlPath = path.join(__dirname, "submiturl.txt");
+fs.writeFileSync(outputSubmitUrlPath, urlAll.toString().replace(/,/g,'\n'), "utf8");
+
 const robots = `User-agent: *
 Disallow:
 Sitemap: ${mainUrl}sitemap.xml
