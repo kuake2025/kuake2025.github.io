@@ -14,7 +14,9 @@ const CONFIG = {
     "https://kuake2025.github.io/a73a4d3c052b4cb68c23d69bde788f06.txt",
 
   // 需要提交的 URL 列表
-  urlList: ["https://kuake2025.github.io/software/vmos-pro.html",
+  urlList: [
+    "https://kuake2025.github.io/software/",
+    "https://kuake2025.github.io/software/vmos-pro.html",
     "https://kuake2025.github.io/software/bitcomet.html",
     "https://kuake2025.github.io/software/capcut-vip.html",
     "https://kuake2025.github.io/software/wifi-master-key.html",
