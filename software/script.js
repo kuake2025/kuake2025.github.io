@@ -53,7 +53,7 @@
        const link = document.createElement("a");
        link.href = resource.downloadURL;
        link.className = "download-btn-more";
-       link.setAttribute("aria-label", resource.description);
+       link.setAttribute("aria-label", resource.name);
        link.textContent = resource.name;
        categoryBox.appendChild(link);
      });
