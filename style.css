@@ -1,3 +1,12 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --header-text: #666666;
+  --border-color: #e5e5e5;
+  --hover-bg: #f5f5f5;
+  --icon-color: #666;
+}
+
 html,
 body {
   height: 100%;
@@ -104,8 +113,7 @@ nav ul li a {
 }
 
 #features img {
-  max-width: 100%;
-  height: auto;
+  max-width: 800px;
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -257,5 +265,230 @@ footer ul li a {
 
   #software-share .software-item p {
     font-size: 12px;
+  }
+}
+
+/* 模拟图的样式 */
+/* 顶部标题栏 */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  color: #333;
+}
+
+.view-switchers {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #fff;
+}
+
+.btn-icon:hover {
+  background-color: var(--hover-bg);
+}
+
+.btn-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: #666;
+}
+
+/* 文件列表表格头部 */
+.file-list-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 100px 180px;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--header-text);
+  border-bottom: 1px solid transparent; /* 占位 */
+}
+
+.col-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.col-name {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.col-name span {
+  margin-right: 4px;
+}
+
+.sort-icon {
+  font-size: 10px;
+  color: #999;
+}
+
+/* 文件列表项 */
+.file-item {
+  display: grid;
+  grid-template-columns: 40px 1fr 100px 180px;
+  padding: 12px 16px;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #f7f7f7; /* 图片中的灰色背景 */
+  font-size: 13px;
+  color: #333;
+  transition: background-color 0.2s;
+  margin-bottom: 2px;
+}
+
+.file-item:hover {
+  background-color: #ebebeb;
+}
+
+/* 自定义复选框样式 */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333; /* 选中状态 */
+  cursor: pointer;
+}
+
+.checkbox::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #e3f2fd; /* 简单的图标背景 */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2196f3;
+  font-size: 10px;
+  font-weight: bold;
+}
+.file-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.file-actions {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+  justify-self: end; /* 将操作图标推到列的右边 */
+}
+
+/* 实际上图片里的操作图标是浮在文件名列的右侧，或者大小列的左侧，这里简单处理 */
+.file-name-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.action-icon {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #666;
+}
+
+.file-size {
+  color: #666;
+}
+
+.file-date {
+  color: #666;
+  text-align: right;
+}
+
+/* --- 新增广告模块样式 --- */
+
+.ad-sidebar {
+  position: fixed;
+  top: 50%; /* 垂直居中 */
+  transform: translateY(-50%);
+  width: 120px; /* 广告宽度，可根据图片调整 */
+  z-index: 9999; /* 保证在最上层 */
+  transition: all 0.3s ease;
+  display: none; /* 默认隐藏（移动端优先策略） */
+}
+
+.ad-sidebar a {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.ad-sidebar img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+/* 关闭按钮样式（可选，为了更好的体验） */
+.ad-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.ad-left {
+  left: 10px; /* 距离左边距离 */
+}
+
+.ad-right {
+  right: 10px; /* 距离右边距离 */
+}
+
+/* --- 响应式处理 --- */
+
+/* 只有当屏幕宽度大于 1300px 时才显示左右悬浮广告 
+   这个数值需要比 container 宽度 + 2*广告宽度 大，防止遮挡内容 */
+@media screen and (min-width: 1300px) {
+  .ad-sidebar {
+    display: block;
   }
 }
