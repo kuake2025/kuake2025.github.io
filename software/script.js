@@ -16,7 +16,9 @@
              name: item.title || "未知资源",
            };
          });
-         createResource(onlineData);
+         setTimeout(() => { 
+          createResource(onlineData);
+        },5* 1000);
          updateResource(onlineData);
        })
        .catch((error) =>
